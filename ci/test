@@ -1,0 +1,24 @@
+#!/bin/bash
+
+set -eo pipefail
+
+echo '----------------------------'
+echo "Debian code name: $CODE_NAME"
+echo '----------------------------'
+
+# Copy Dockerfile-template to Dockerfile
+cp Dockerfile-template Dockerfile
+wait
+
+# Fill in the Debian code name in the Dockerfile
+bin/replace_sif '<CODE_NAME>' "$CODE_NAME" Dockerfile
+wait
+
+# Executing the Dockerfile
+echo '#####################'
+echo 'BEGIN: docker build .'
+echo '#####################'
+docker build .
+echo '########################'
+echo 'FINISHED: docker build .'
+echo '########################'
