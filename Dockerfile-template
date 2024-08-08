@@ -10,4 +10,5 @@ WORKDIR /home/winner/debian-tools-install
 COPY . .
 
 RUN sudo chown -R winner:winner /home/winner/debian-tools-install && \
-    cd /home/winner/debian-tools-install && bin/apt-get-update && install/<TOOL>
+    cd /home/winner/debian-tools-install && bin/apt-get-update && \
+    cd /home/winner/debian-tools-install && install/<TOOL>
