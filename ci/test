@@ -2,9 +2,10 @@
 
 set -eo pipefail
 
-echo '----------------------------'
-echo "Debian code name: $CODE_NAME"
-echo '----------------------------'
+echo '----------------------------------'
+echo "Debian code name:       $CODE_NAME"
+echo "Debian tool to install: $TOOL"
+echo '----------------------------------'
 
 # Copy Dockerfile-template to Dockerfile
 cp Dockerfile-template Dockerfile
@@ -12,6 +13,10 @@ wait
 
 # Fill in the Debian code name in the Dockerfile
 bin/replace_sif '<CODE_NAME>' "$CODE_NAME" Dockerfile
+wait
+
+# Fill in the tool name in the Dockerfile
+bin/replace_sif '<TOOL>' "$TOOL" Dockerfile
 wait
 
 # Executing the Dockerfile

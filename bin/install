@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -eo pipefail
+
+PACKAGE1=$1
+
+echo '---------------------------------'
+echo "sudo apt-get install -y $PACKAGE1"
+echo '---------------------------------'
+sudo apt-get install -y $PACKAGE1
