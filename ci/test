@@ -7,15 +7,14 @@ cp Dockerfile-template Dockerfile
 wait
 
 # Fill in the Debian code name in the Dockerfile
-pwd
 bin/replace_sif '<CODE_NAME>' "$CODE_NAME" Dockerfile
 wait
 
 # Executing the Dockerfile
-# echo '#####################'
-# echo 'BEGIN: docker build .'
-# echo '#####################'
-# docker build .
-# echo '########################'
-# echo 'FINISHED: docker build .'
-# echo '########################'
+echo '#####################'
+echo 'BEGIN: docker build .'
+echo '#####################'
+docker build .
+echo '########################'
+echo 'FINISHED: docker build .'
+echo '########################'
