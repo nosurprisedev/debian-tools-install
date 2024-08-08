@@ -15,6 +15,10 @@ wait
 bin/replace_sif '<CODE_NAME>' "$CODE_NAME" Dockerfile
 wait
 
+# Fill in the tool name in the Dockerfile
+bin/replace_sif '<TOOL>' "$TOOL" Dockerfile
+wait
+
 # Executing the Dockerfile
 echo '#####################'
 echo 'BEGIN: docker build .'
