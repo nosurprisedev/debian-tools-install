@@ -24,9 +24,11 @@ jobs:
     strategy:
       matrix:
         MATRIX_CODE_NAME: ['bookworm', 'trixie', 'sid']
+        MATRIX_TOOL: ['geany']
 
     env:
       CODE_NAME: ${{ matrix.MATRIX_CODE_NAME }}
+      TOOL: ${{ matrix.MATRIX_TOOL }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
