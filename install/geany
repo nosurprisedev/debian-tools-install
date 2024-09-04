@@ -3,3 +3,7 @@
 set -eo pipefail
 
 bin/install 'geany'
+
+echo '---------------'
+echo 'geany --version'
+geany --version
