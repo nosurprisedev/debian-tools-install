@@ -2,9 +2,18 @@
 
 set -eo pipefail
 
+echo '###'
+echo 'env'
+env
+echo ''
+echo ''
+
 bin/install 'x11vnc'
 bin/install 'xvfb'
 bin/install 'keepassxc'
+
+mkdir ~/.vnc
+x11vnc -storepasswd 1234 ~/.vnc/passwd
 
 echo '-------------------'
 echo 'keepassxc --version'
