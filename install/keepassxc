@@ -3,6 +3,7 @@
 set -eo pipefail
 
 bin/install 'x11vnc'
+bin/install 'xvfb'
 bin/install 'keepassxc'
 
 echo '-------------------'
