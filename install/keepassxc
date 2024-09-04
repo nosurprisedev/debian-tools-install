@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eo pipefail
+
+echo '***************************'
+echo 'BEGIN: installing KeePassXC'
+echo '***************************'
+
+bin/install 'keepassxc'
+
+echo '******************************'
+echo 'FINISHED: installing KeePassXC'
+echo '******************************'
