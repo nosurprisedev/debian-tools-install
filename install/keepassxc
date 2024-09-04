@@ -2,6 +2,7 @@
 
 set -eo pipefail
 
+bin/install 'xcb'
 bin/install 'keepassxc'
 
 echo '-------------------'
