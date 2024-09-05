@@ -8,3 +8,9 @@ echo '---------------------------------'
 echo "sudo apt-get install -y $PACKAGE1"
 echo '---------------------------------'
 sudo apt-get install -y $PACKAGE1
+
+wait
+echo ''
+echo '------------------------------'
+echo "dpkg -s $PACKAGE1 | 'Version:'"
+dpkg -s "$PACKAGE1" | 'Version:'
