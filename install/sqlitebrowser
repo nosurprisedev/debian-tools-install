@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eo pipefail
+
+echo '***************************************'
+echo 'BEGIN: installing DB Browser for SQLite'
+echo '***************************************'
+
+bin/install 'sqlitebrowser'
+
+echo '******************************************'
+echo 'FINISHED: installing DB Browser for SQLite'
+echo '******************************************'
