@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -eo pipefail
+
+# Install xdot:
+# interactive viewer for graphs written in Graphviz's dot language
+
+echo '**********************'
+echo 'BEGIN: installing xdot'
+echo '**********************'
+
+bin/install 'xdot'
+
+echo '*************************'
+echo 'FINISHED: installing xdot'
+echo '*************************'
