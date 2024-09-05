@@ -11,6 +11,6 @@ sudo apt-get install -y $PACKAGE1
 
 wait
 echo ''
-echo '------------------------------'
-echo "dpkg -s $PACKAGE1 | 'Version:'"
-dpkg -s "$PACKAGE1" | 'Version:'
+echo '-----------------------------------'
+echo "dpkg -s $PACKAGE1 | grep 'Version:'"
+dpkg -s "$PACKAGE1" | grep 'Version:'
