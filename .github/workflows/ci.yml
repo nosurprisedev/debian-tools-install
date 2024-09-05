@@ -24,7 +24,7 @@ jobs:
     strategy:
       matrix:
         MATRIX_CODE_NAME: ['bookworm', 'trixie', 'sid']
-        MATRIX_TOOL: ['geany', 'keepassxc', 'searchmonkey', 'sqlitebrowser']
+        MATRIX_TOOL: ['geany', 'keepassxc', 'searchmonkey', 'sqlitebrowser', 'xdot']
 
     env:
       CODE_NAME: ${{ matrix.MATRIX_CODE_NAME }}
