@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -eo pipefail
+
+echo '******************************'
+echo 'BEGIN: installing SearchMonkey'
+echo '******************************'
+
+bin/install 'searchmonkey'
+
+echo '*********************************'
+echo 'FINISHED: installing SearchMonkey'
+echo '*********************************'
